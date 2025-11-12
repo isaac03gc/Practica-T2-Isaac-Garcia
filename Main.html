@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PGC - Últimas Tecnologías</title>
+    <link rel="stylesheet" href="Style.css">
+    <meta name="author" content="Isaac García Carmona">
+    <script src="PCG.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="/images/pcg_logo.png">
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="nav-container">
+                <a href="Main.html" class="logo-link">
+                    <svg class="logo-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-label="PCG - icono chip">
+                        <defs>
+                            <linearGradient id="pcgChipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#ffffff" />
+                                <stop offset="100%" stop-color="#ff3366" />
+                            </linearGradient>
+                            <filter id="chipShadow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.15" />
+                            </filter>
+                        </defs>
+
+                        <!-- Círculo exterior -->
+                        <circle cx="60" cy="60" r="50" fill="none" stroke="url(#pcgChipGrad)" stroke-width="3" />
+
+                        <!-- Chip central -->
+                        <g transform="translate(35,35)" filter="url(#chipShadow)">
+                            <rect x="0" y="0" width="50" height="50" rx="6" ry="6" fill="#0f1724"
+                                stroke="url(#pcgChipGrad)" stroke-width="2" />
+
+                            <!-- Pines -->
+                            <g fill="url(#pcgChipGrad)">
+                                <rect x="-4" y="6" width="4" height="6" rx="1" />
+                                <rect x="-4" y="20" width="4" height="6" rx="1" />
+                                <rect x="-4" y="34" width="4" height="6" rx="1" />
+                                <rect x="50" y="6" width="4" height="6" rx="1" />
+                                <rect x="50" y="20" width="4" height="6" rx="1" />
+                                <rect x="50" y="34" width="4" height="6" rx="1" />
+                            </g>
+
+                            <!-- Líneas internas -->
+                            <path d="M8,10 L42,10 M8,20 L42,30 M8,40 L30,40" stroke="url(#pcgChipGrad)" stroke-width="2"
+                                stroke-linecap="round" fill="none" opacity="0.9" />
+                        </g>
+                    </svg>
+
+                    <span class="logo-text">PCG</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="Main.html" class="nav-link active">Inicio</a></li>
+                    <li><a href="Perifericos.html" class="nav-link">Perifericos</a></li>
+                    <li><a href="Componentes.html" class="nav-link">Componentes</a></li>
+                    <li><a href="Moviles.html" class="nav-link">Moviles</a></li>
+                    <li><a href="Contacto.html" class="nav-cta">Contáctanos</a></li>
+                </ul>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-container">
+                <div class="hero-left">
+                    <div class="hero-badge">Mejores marcas</div>
+                    <h1 class="hero-title">
+                        <span class="line"><span>Componentes</span></span>
+                        <span class="line"><span>Para <span class="accent">Todos</span></span></span>
+                        <span class="line"><span>Los Equipos</span></span>
+                    </h1>
+                    <p class="hero-description">
+                        Descubre todos los componentes que necesitas para armar el equipo de tus sueños.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Piezas Exclusivas</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">48H</span>
+                            <span class="stat-label">Entrega Rápida</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Sostenible</span>
+                        </div>
+                    </div>
+                    <div class="cta-group">
+                        <a href="Componentes.html" class="cta-button primary">Explorar</a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-image-wrapper">
+                        <div class="hero-carousel">
+                            <div class="carousel-slide active">
+                                <img src="images/PC-Viñeta-1.jpg" alt="Fashion Model 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/PC-Viñeta-2.jpg" alt="Fashion Model 2">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/PC-Viñeta-3.jpg" alt="Fashion Model 3">
+                            </div>
+                            <div class="carousel-overlay"></div>
+                            <div class="carousel-indicators">
+                                <span class="indicator active" data-slide="0"></span>
+                                <span class="indicator" data-slide="1"></span>
+                                <span class="indicator" data-slide="2"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <aside>
+        <section class="featured" id="featured">
+            <div class="featured-container">
+                <div class="featured-hero">
+                    <div class="featured-content">
+                        <span class="label">Ultimas tecnologías</span>
+                        <h2>La Innovación en la Informatica</h2>
+
+                        <div class="feature-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-icon">👑</div>
+                                <div class="highlight-title">Calidad Premium</div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🌱</div>
+                                <div class="highlight-title">Sostenible</div>
+                                <div class="highlight-desc">Materiales de origen ético</div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">✨</div>
+                                <div class="highlight-title">Mejores Marcas</div>
+                                <div class="highlight-desc">Trabajamos con las mejores marcas del mercado</div>
+                            </div>
+                        </div>
+
+                        <a href="Componentes.html" class="feature-cta">Descubre Nuestro Catálogo de Componentes</a>
+                    </div>
+
+                    <div class="featured-image-section">
+                        <div class="featured-image-grid">
+                            <div class="featured-img">
+                                <img src="images/Placa Base.png" alt="Placa Base Asus Rog">
+                            </div>
+                            <div class="featured-img">
+                                <img src="images/FuenteAlimentacion.png" alt="Fuente de Alimentación Cooler Master">
+                            </div>
+                            <div class="featured-img">
+                                <img src="images/RAM.png" alt="RAM G.Skill Trident Z">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials">
+                    <div class="testimonials-header">
+                        <h3>Observa la opinion de nuestros clientes</h3>
+                        <p class="section-subtitle">Historias reales de entusiastas de la Informatica</p>
+                    </div>
+
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">★★★★★</div>
+                            <div class="testimonial-quote">
+                                "PGC ha transformado completamente mi experiencia de compra de componentes.
+                                La calidad y el servicio son insuperables."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">S</div>
+                                <div class="author-info">
+                                    <h4>Samuel Torres</h4>
+                                    <p>Ingeniero de Sistemas</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">★★★★★</div>
+                            <div class="testimonial-quote">
+                                "PGC ha superado todas mis expectativas. La atención al detalle y la calidad son
+                                excepcionales."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">M</div>
+                                <div class="author-info">
+                                    <h4>Marcos Rodriguez</h4>
+                                    <p>Community Manager</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">★★★★★</div>
+                            <div class="testimonial-quote">
+                                "Desde que descubrí PGC, no compro en ningún otro sitio. La variedad y calidad de sus
+                                componentes es impresionante."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">A</div>
+                                <div class="author-info">
+                                    <h4>Alberto Ruiz</h4>
+                                    <p>Empresario</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </aside>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>PGC</h3>
+                <p>Tu fuente confiable en componentes, hardware y tecnología para PC.
+                    Ensamblamos potencia, rendimiento y calidad en cada pieza. </p>
+                <div class="social-links">
+                    <a href="#" class="social-link">f</a>
+                    <a href="#" class="social-link">x</a>
+                    <a href="#" class="social-link">i</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Tienda</h4>
+                <ol>
+                    <li><a href="Main.html">Principal</a></li>
+                    <li><a href="Componentes.html">Componentes</a></li>
+                    <li><a href="Perifericos.html">Perifericos</a></li>
+                    <li><a href="Moviles.html">Moviles</a></li>
+                </ol>
+            </div>
+            <div class="footer-column">
+                <h4>Soporte</h4>
+                <ol>
+                    <li><a href="Contacto.html">Contáctanos</a></li>
+                    <li><a href="#">Información de Compra</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ol>
+            </div>
+            <div class="footer-column">
+                <h4>Empresa</h4>
+                <ol>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Carreras</a></li>
+                    <li><a href="#">Sostenibilidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Isaac García. All rights reserved. | Designed by Isaac García Carmona</p>
+            <div class="payment-methods">
+                <div class="payment-icon">VISA</div>
+                <div class="payment-icon">MC</div>
+                <div class="payment-icon">AMEX</div>
+                <div class="payment-icon">PAY</div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PGC - Últimas Tecnologías</title>
+    <link rel="stylesheet" href="Style.css">
+    <meta name="author" content="Isaac García Carmona">
+    <script src="PCG.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="/images/pcg_logo.png">
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="nav-container">
+                <a href="Main.html" class="logo-link">
+                    <svg class="logo-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-label="PCG - icono chip">
+                        <defs>
+                            <linearGradient id="pcgChipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#ffffff" />
+                                <stop offset="100%" stop-color="#ff3366" />
+                            </linearGradient>
+                            <filter id="chipShadow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.15" />
+                            </filter>
+                        </defs>
+
+                        <!-- Círculo exterior -->
+                        <circle cx="60" cy="60" r="50" fill="none" stroke="url(#pcgChipGrad)" stroke-width="3" />
+
+                        <!-- Chip central -->
+                        <g transform="translate(35,35)" filter="url(#chipShadow)">
+                            <rect x="0" y="0" width="50" height="50" rx="6" ry="6" fill="#0f1724"
+                                stroke="url(#pcgChipGrad)" stroke-width="2" />
+
+                            <!-- Pines -->
+                            <g fill="url(#pcgChipGrad)">
+                                <rect x="-4" y="6" width="4" height="6" rx="1" />
+                                <rect x="-4" y="20" width="4" height="6" rx="1" />
+                                <rect x="-4" y="34" width="4" height="6" rx="1" />
+                                <rect x="50" y="6" width="4" height="6" rx="1" />
+                                <rect x="50" y="20" width="4" height="6" rx="1" />
+                                <rect x="50" y="34" width="4" height="6" rx="1" />
+                            </g>
+
+                            <!-- Líneas internas -->
+                            <path d="M8,10 L42,10 M8,20 L42,30 M8,40 L30,40" stroke="url(#pcgChipGrad)" stroke-width="2"
+                                stroke-linecap="round" fill="none" opacity="0.9" />
+                        </g>
+                    </svg>
+
+                    <span class="logo-text">PCG</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="Main.html" class="nav-link">Inicio</a></li>
+                    <li><a href="Perifericos.html" class="nav-link active">Perifericos</a></li>
+                    <li><a href="Componentes.html" class="nav-link">Componentes</a></li>
+                    <li><a href="Moviles.html" class="nav-link ">Moviles</a></li>
+                    <li><a href="Contacto.html" class="nav-cta">Contáctanos</a></li>
+                </ul>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="collections" id="collections">
+            <div class="section-header">
+                <h2 class="section-title">Periféricos</h2>
+                <p class="section-subtitle">Descubre nuestra selección más vendida</p>
+            </div>
+
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="all">Todos</button>
+                <button class="tab-btn" data-category="Ratones">Ratones</button>
+                <button class="tab-btn" data-category="Teclados">Teclados</button>
+                <button class="tab-btn" data-category="Micrófonos">Micrófonos</button>
+                <button class="tab-btn" data-category="Edición Limitada">Edición Limitada</button>
+            </div>
+
+            <div class="grid" id="collectionsGrid">
+                <div class="collection-card" data-category="Ratones">
+                    <div class="collection-thumbnail">
+                        <img src="images/Logitech-g203.jpg" alt="Ratón Logitech g203">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Recien Llegado</span>
+                        <h3 class="card-title">Logitech g203</h3>
+                        <p class="card-subtitle">Ratón</p>
+                        <p class="card-price">89€</p>
+                    </div>
+                </div>
+                <div class="collection-card" data-category="Edición Limitada">
+                    <div class="collection-thumbnail">
+                        <img src="images/Razer-Kraken-V4-Pro.jpg" alt="Razer Kraken V4 Pro">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Edición Limitada</span>
+                        <h3 class="card-title">Razer Kraken V4 Pro</h3>
+                        <p class="card-subtitle">Auriculares</p>
+                        <p class="card-price">396,99€</p>
+                    </div>
+                </div>
+                <div class="collection-card" data-category="Teclados">
+                    <div class="collection-thumbnail">
+                        <img src="images/Corsair-Vanguard-Pro-96.jpg" alt="Corsair Vanguard Pro 96">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Más Vendido</span>
+                        <h3 class="card-title">Corsair Vanguard Pro 96</h3>
+                        <p class="card-subtitle">Teclados</p>
+                        <p class="card-price">229€</p>
+                    </div>
+                </div>
+                <div class="collection-card" data-category="Micrófonos">
+                    <div class="collection-thumbnail">
+                        <img src="images/HyperX-DuoCast.jpg" alt="HyperX DuoCast">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Trending</span>
+                        <h3 class="card-title">HyperX DuoCast</h3>
+                        <p class="card-subtitle">Micrófonos</p>
+                        <p class="card-price">75,95€</p>
+                    </div>
+                </div>
+                <div class="collection-card" data-category="Ratones">
+                    <div class="collection-thumbnail">
+                        <img src="images/Razer-Viper-V3-HyperSpeed.jpg" alt="Razer Viper V3 HyperSpeed">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Pre-Order</span>
+                        <h3 class="card-title">Razer Viper V3 HyperSpeed</h3>
+                        <p class="card-subtitle">Ratón</p>
+                        <p class="card-price">60€</p>
+                    </div>
+                </div>
+                <div class="collection-card" data-category="Teclados">
+                    <div class="collection-thumbnail">
+                        <img src="images/Razer-Huntsman-Mini.jpg" alt="Razer Huntsman Mini">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Oferta</span>
+                        <h3 class="card-title">Razer Huntsman Mini</h3>
+                        <p class="card-subtitle">Teclado</p>
+                        <p class="card-price">99,99€</p>
+                    </div>
+                </div>
+                <div class="collection-card" data-category="Edición Limitada">
+                    <div class="collection-thumbnail">
+                        <img src="images/LG-UltraGear-40U990A-W-UltraWide.jpg" alt="LG UltraGear 40U990A-W UltraWide">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Exclusivo</span>
+                        <h3 class="card-title">LG UltraGear 40U990A-W UltraWide</h3>
+                        <p class="card-subtitle">Monitor</p>
+                        <p class="card-price">1,930€</p>
+                    </div>
+                </div>
+                <div class="collection-card" data-category="Micrófonos">
+                    <div class="collection-thumbnail">
+                        <img src="images/ASUS-ROG-Carnyx.jpg" alt="ASUS ROG Carnyx">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Esencial</span>
+                        <h3 class="card-title">ASUS ROG Carnyx</h3>
+                        <p class="card-subtitle">Micrófono</p>
+                        <p class="card-price">140€</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>PGC</h3>
+                <p>Tu fuente confiable en componentes, hardware y tecnología para PC.
+                    Ensamblamos potencia, rendimiento y calidad en cada pieza. </p>
+                <div class="social-links">
+                    <a href="#" class="social-link">f</a>
+                    <a href="#" class="social-link">x</a>
+                    <a href="#" class="social-link">i</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Tienda</h4>
+                <ol>
+                    <li><a href="Main.html">Principal</a></li>
+                    <li><a href="Componentes.html">Componentes</a></li>
+                    <li><a href="Perifericos.html">Perifericos</a></li>
+                    <li><a href="Moviles.html">Moviles</a></li>
+                </ol>
+            </div>
+            <div class="footer-column">
+                <h4>Soporte</h4>
+                <ol>
+                    <li><a href="Contacto.html">Contáctanos</a></li>
+                    <li><a href="#">Información de Compra</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ol>
+            </div>
+            <div class="footer-column">
+                <h4>Empresa</h4>
+                <ol>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Carreras</a></li>
+                    <li><a href="#">Sostenibilidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Isaac García. All rights reserved. | Designed by Isaac García Carmona</p>
+            <div class="payment-methods">
+                <div class="payment-icon">VISA</div>
+                <div class="payment-icon">MC</div>
+                <div class="payment-icon">AMEX</div>
+                <div class="payment-icon">PAY</div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
